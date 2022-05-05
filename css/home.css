@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+} */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffe490;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 13vh;
+}
+
+.header_banner {
+  text-align: center;
+  font-size: 30px;
+  padding: 5px;
+  background-color: #701924;
+  z-index: 1;
+  color: #aaaaaa;
+  font-weight: 900;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 87vh;
+
+}
+
+.image_container {
+  width: 100%;
+  height: 100%;
+}
+
+.description {
+  position: absolute;
+  bottom: 10vh;
+  /* background-color: #ddd9d9; */
+  font-size: 35px;
+  font-weight: 600;
+  color: lightgray;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.topnav,
+.sidenav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a,
+.sidenav a {
+  float: left;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover,
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active,
+.sidenav a.active {
+  background-color: dimgrey;
+  color: white;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); */
+
+::selection {
+  background: rgb(40, 72, 177);
+  color: #fff;
+}
+
+h2 {
+  color: whitesmoke;
+  font-size: xxx-large;
+}
+
+.msg {
+  color: #fa4242;
+  padding: 5px;
+}
+
+.successmsg {
+  color: rgb(7, 121, 92);
+  padding: 5px;
+}
+
+.wrapper {
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 10px;
+}
+
+.wrapper .title-text {
+  display: flex;
+  width: 200%;
+}
+
+.wrapper .title {
+  width: 50%;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.wrapper .slide-controls {
+  position: relative;
+  display: flex;
+  height: 40px;
+  width: 99%;
+  overflow: hidden;
+  margin: 20px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.slide-controls .slide {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.slide-controls label.signup {
+  color: #000;
+}
+
+.slide-controls .slider-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #888888, #000000);
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#signup:checked~.slider-tab {
+  left: 50%;
+}
+
+#signup:checked~label.signup {
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+
+#signup:checked~label.login {
+  color: #000;
+}
+
+#login:checked~label.signup {
+  color: #000;
+}
+
+#login:checked~label.login {
+  cursor: default;
+  user-select: none;
+}
+
+.wrapper .form-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-container .form-inner {
+  display: flex;
+  width: 200%;
+}
+
+.form-container .form-inner form {
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.form-inner form .field {
+  height: 35px;
+  width: 95%;
+  margin-top: 20px;
+}
+
+.form-inner form .field input,
+.form-inner form textarea.field,
+.form-inner form select.field,
+textarea#address {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+select#gender {
+  height: 105%;
+  width: 105%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+}
+
+.form-inner form .field input:focus {
+  border-color: #000000;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+.form-inner form .field input::placeholder,
+form textarea::placeholder,
+form select::placeholder {
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder {
+  color: #b3b3b3;
+}
+
+.form-inner form .pass-link {
+  margin-top: 15px;
+}
+
+.form-inner form .signup-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+  color: #fa4242;
+  text-decoration: none;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+form .btn {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+form .btn .btn-layer {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(left, #888888, #000000);
+  border-radius: 5px;
+  /* transition: all 0.4s ease;; */
+}
+
+form .btn:hover .btn-layer {
+  left: 0;
+}
+
+form .btn input[type="submit"] {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+/***************************************************************************************************/
+/* User Dashboard */
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 15vw;
+  position: fixed;
+  /* z-index: 1; */
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 10vh;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.content_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  height: 100%;
+  width: 85vw;
+  position: fixed;
+  right: 0;
+  overflow: scroll;
+}
+
+
+
+.profile,
+.edit-profile,
+.complaint_container {
+  width: 50%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 5px grey;
+  margin-bottom: 100px;
+  background-color: #e3e3e3;
+}
+
+.profile div.profile_header,
+.edit-profile .profile_header .complaint_container div.complaint_header {
+  font-size: 30px;
+  width: 40%;
+  margin: auto;
+  padding: 10px;
+}
+
+.profile div,
+.edit-profile div {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 8vh;
+
+}
+
+.complaint_container .field {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.profile div span,
+.edit-profile div span,
+.complaint_container span {
+  font-size: 20px;
+  width: 40%;
+  line-height: 50px;
+  margin-left: 50px;
+}
+
+.profile input,
+.profile textarea,
+.edit-profile input[readonly] {
+  font-size: 20px;
+  border: 0;
+  background-color: transparent;
+  line-height: 50px;
+  outline: 0;
+}
+
+.edit-profile input,
+.edit-profile textarea {
+  width: 100%;
+  font-size: 20px;
+  margin: 10px;
+  padding-bottom: 10px;
+  background-color: transparent;
+  border: 0;
+  line-height: 30px;
+  outline: 0;
+  border-bottom: 1px solid;
+}
+
+.edit-profile textarea {
+  overflow: auto;
+  resize: none;
+}
+
+.complaint_container input,
+.complaint_container textarea,
+select#inci_type {
+
+  width: 100%;
+  margin: 5px;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid;
+  font-size: 20px;
+  outline: 0;
+}
+
+
+.complaint_container textarea {
+  overflow: auto;
+  resize: none;
+  height: 200px;
+}
+
+.complaint-card {
+  text-align: center;
+  width: 96%;
+  margin: auto;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 5px 5px 5px 0 grey;
+  background-color: rgb(255 0 0 / 12%);;
+}
+
+.complaint-card>div {
+  width: calc(100% / 8);
+  display: flex;
+  flex-direction: column;
+}
+
+.complaint-card.police-detail-card>div {
+  width: calc(100% / 11);
+}
+
+.complaint-card input {
+  text-align: center;
+  background: transparent;
+  border: 0;
+  padding: 5px;
+  outline: 0;
+}
+
+.complaint-card textarea {
+  overflow: auto;
+  resize: none;
+  overflow-x: hidden;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  height: 100px;
+}
+
+.complaint-card:last-child {
+  margin-bottom: 20vh;
+}
+
+.complaint_header {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.overview_header {
+  text-align: center;
+  font-size: 30px;
+}
+
+.overview-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 50px;
+}
+
+.overview-card .field {
+  font-size: 20px;
+  width: 250px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #ff000033;
+  box-shadow: 5px 5px 5px 5px gray;
+}
+
+.overview-card .field-value {
+  padding: 15px;
+  font-size: 30px;
+}
+
+.overview-card .field-title {
+  height: 60px;
+}
+
+.desc {
+  padding: 20px;
+  font-size: 30px;
+  margin: 10px;
+  font-family: cursive;
+}
+
+
+/***************************************************************************************************/
+/* Police Dashboard */
+
+.image {
+  margin-right: 12px;
+}
+
+.edit-link>a {
+  margin-left: auto;
+}
+
+button.download-container,
+button.edit-link-container {
+  line-height: 36px;
+  height: 40px;
+  display: flex;
+  background: transparent;
+  outline: 0;
+  border: 0;
+}
+
+.admin-detail-card button.edit-link-container {
+  width: 150px;
+}
+
+
+.download-container img,
+.edit-link-container img {
+  padding-right: 8px;
+  width: 30%;
+  vertical-align: middle;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.complaint-card.complaint-detail-card>div {
+  width: calc(100% / 7);
+
+}
+
+.complaint-card.fir-detail-card>div {
+  width: calc(100% / 7);
+
+}
+
+input[type="date"] {
+  margin-left: auto;
+}
+
+.complaint-card.station-detail-card>div {
+  width: calc(100% / 9);
+
+}
+
+.complaint-card.admin-detail-card>div {
+  width: calc(100% / 3);
+
+}
+
+.form-container .form-inner form .btn {
+  width: 130px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+input[type="file"] {
+  border: 0;
+}
+
+.content .btn {
+  height: 45px;
+  width: 130px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+
+.complaint_container select,
+.edit-profile select {
+  outline: 0;
+  height: 50px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  width: 100%;
+  font-size: 18px;
+  border-bottom: 1px solid black;
+}
+
+button.add {
+  width: 70px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.add img {
+  width: 10px;
+}
